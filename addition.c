@@ -59,5 +59,7 @@ int addition(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, Dlist *
 		if(temp2!=NULL)
 		    temp2=temp2->prev;
 	}
-	print_list(*headR);
+	if(carry!=0)
+		    dl_insert_first(headR,tailR,carry);
+	//print_list(*headR);
 }

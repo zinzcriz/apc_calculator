@@ -36,5 +36,6 @@ int division(Dlist **head1,Dlist **tail1,Dlist **head2,Dlist **tail2,Dlist **hea
 int dl_insert_first(Dlist **head, Dlist **tail, int data);
 int dl_insert_last(Dlist **head, Dlist **tail, int data);
 void print_list(Dlist *head);
+int dl_delete_list(Dlist **head, Dlist **tail);
 
 #endif

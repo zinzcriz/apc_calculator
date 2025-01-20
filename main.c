@@ -18,14 +18,17 @@ int main(int argc,char *argv[])
                                 digit_to_list(&head1,&tail1,&head2,&tail2,argv);
 				/* call the function to perform the addition operation */
                                 addition(&head1,&tail1,&head2,&tail2,&headR,&tailR);
+								print_list(headR);
 				break;
 			case '-':
 			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);	
 				/* call the function to perform the subtraction operation */
 				        subtraction(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);    
 				break;
-			case '*':	
+			case 'm':	
+			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);
 				/* call the function to perform the multiplication operation */
+				        multiplication(&head1,&tail1,&head2,&tail2,&headR,&tailR);
 				break;
 			case '/':	
 				/* call the function to perform the division operation */
