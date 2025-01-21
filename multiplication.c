@@ -31,9 +31,12 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				temp1 = temp1->prev;
 			}
 			if (carry != 0)
+			{
 				dl_insert_first(headR, tailR, carry);
+				carry=0;
+			}
 			temp1=*tail1;
-			printf("count1\n");
+			//printf("count1\n");
 		}
 		//count++;
 		if (count == 1)
@@ -58,7 +61,10 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				temp1 = temp1->prev;
 			}
 			if (carry != 0)
+			{
 				dl_insert_first(&headR2, &tailR2, carry);
+				carry=0;
+			}
 			temp1=*tail1;
 			//printf("count2\n");
 		    //print_list(headR2);
@@ -67,16 +73,18 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 		if (count == 1)
 		{
 			addition(headR, tailR, &headR2, &tailR2, &headB, &tailB);
-			dl_delete_list(headR,tailR);
+			//dl_delete_list(headR,tailR);
 			*headR = headB;
 			*tailR = tailB;
 			dl_delete_list(&headR2,&tailR2);
-			dl_delete_list(&headB,&tailB);
+			//dl_delete_list(&headB,&tailB);
 			//print_list(*headR);
 		}
 		//print_list(*headR);
 		if(count>=2)
 		{
+			dl_delete_list(&headB,&tailB);
+			dl_delete_list(&headR2,&tailR2);
 			for(i=0;i<count;i++)
 			{
 				dl_insert_first(&headR2,&tailR2,0);
@@ -104,17 +112,17 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				dl_insert_first(&headR2, &tailR2, carry);
 				carry=0;
 			}
-			print_list(*headR);
-			print_list(headR2);
+			//print_list(*headR);
+			//print_list(headR2);
 			addition(headR, tailR, &headR2, &tailR2, &headB, &tailB);
 			//printf("count2\n");
-			dl_delete_list(headR,tailR);
+			//dl_delete_list(headR,tailR);
 			*headR = headB;
 			*tailR = tailB;
-			temp1=*tail1;
-			dl_delete_list(&headR2,&tailR2);
-			dl_delete_list(&headB,&tailB);
-			printf("Hai\n");
+			//temp1=*tail1;
+			//dl_delete_list(&headR2,&tailR2);
+			//dl_delete_list(&headB,&tailB);
+			//printf("Hai\n");
 		}
 		temp2 = temp2->prev;
 		temp1=*tail1;

@@ -82,12 +82,12 @@ int dl_delete_list(Dlist **head, Dlist **tail)
 {
     if(*head==NULL)
         return FAILURE;
-    while(*head==NULL)
+    /*while(*head==NULL)
     {
         *head=(*head)->next;
         free((*head)->prev);
-    }
-    free(*head);
+    }*/
+    //free(*head);
     *head=*tail=NULL;
     return SUCCESS;
 
