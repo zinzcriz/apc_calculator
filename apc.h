@@ -30,7 +30,7 @@ int multiplication(Dlist **head1,Dlist **tail1,Dlist **head2,Dlist **tail2,Dlist
 
 
 /*Division */
-int division(Dlist **head1,Dlist **tail1,Dlist **head2,Dlist **tail2,Dlist **headR,Dlist **tailR);
+int division(Dlist **head1,Dlist **tail1,Dlist **head2,Dlist **tail2,Dlist **headR,Dlist **tailR,char *argv[]);
 
 //Double linked list functions
 int dl_insert_first(Dlist **head, Dlist **tail, int data);

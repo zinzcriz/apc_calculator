@@ -83,8 +83,10 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 		//print_list(*headR);
 		if(count>=2)
 		{
-			dl_delete_list(&headB,&tailB);
-			dl_delete_list(&headR2,&tailR2);
+			//dl_delete_list(&headB,&tailB);
+			//dl_delete_list(&headR2,&tailR2);
+			headB=NULL;
+			tailB=NULL;
 			for(i=0;i<count;i++)
 			{
 				dl_insert_first(&headR2,&tailR2,0);
@@ -116,11 +118,11 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 			//print_list(headR2);
 			addition(headR, tailR, &headR2, &tailR2, &headB, &tailB);
 			//printf("count2\n");
-			//dl_delete_list(headR,tailR);
+			dl_delete_list(headR,tailR);
 			*headR = headB;
 			*tailR = tailB;
 			//temp1=*tail1;
-			//dl_delete_list(&headR2,&tailR2);
+			dl_delete_list(&headR2,&tailR2);
 			//dl_delete_list(&headB,&tailB);
 			//printf("Hai\n");
 		}

@@ -23,7 +23,8 @@ int main(int argc,char *argv[])
 			case '-':
 			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);	
 				/* call the function to perform the subtraction operation */
-				        subtraction(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);    
+				        subtraction(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);
+						print_list(headR);    
 				break;
 			case 'm':	
 			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);
@@ -32,6 +33,7 @@ int main(int argc,char *argv[])
 				break;
 			case '/':	
 				/* call the function to perform the division operation */
+				division(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);
 				break;
 			default:
 				printf("Invalid Input:-( Try again...\n");
