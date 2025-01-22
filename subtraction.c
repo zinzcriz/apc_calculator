@@ -5,6 +5,7 @@ int subtraction(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, Dlis
 	/* Definition goes here */
 	Dlist *temp1, *temp2;
 	int flag = 0;
+	int num1, num2, sub, carry = 0;
 	if (argv != NULL)
 	{
 		int c1, c2;
@@ -41,14 +42,14 @@ int subtraction(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, Dlis
 			}
 			else
 			{
-				printf("0\n");
+				sub=0;
+				dl_insert_first(headR, tailR, sub);
 				return 0;
 			}
 		}
 	}
 	temp1 = *tail1;
 	temp2 = *tail2;
-	int num1, num2, sub, carry = 0;
 	while (temp1 != NULL || temp2 != NULL)
 	{
 		if (temp1 != NULL)

@@ -77,18 +77,36 @@ void print_list(Dlist *head)
     }
 }
 
-
 int dl_delete_list(Dlist **head, Dlist **tail)
-{
+{   
     if(*head==NULL)
         return FAILURE;
-    while(*head==NULL)
-    {
+    while((*head)==NULL)
+    {   
         *head=(*head)->next;
         free((*head)->prev);
     }
     free(*head);
-    *head=*tail=NULL;
+    *head=NULL;
+    *tail=NULL;
     return SUCCESS;
 
 }
+/*int dl_delete_list(Dlist **head, Dlist **tail)
+{
+    if(*head == NULL)
+    {
+        return FAILURE;
+    }
+    Dlist *temp=(*head);
+    Dlist *prev=(*head);
+    while(temp != NULL)
+    {
+        prev = temp;
+        temp=temp-> next;
+        free(prev);
+    }
+    *head=NULL;
+    *tail = NULL;
+    
+}*/

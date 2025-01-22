@@ -36,7 +36,6 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				carry=0;
 			}
 			temp1=*tail1;
-			//printf("count1\n");
 		}
 		//count++;
 		if (count == 1)
@@ -66,7 +65,6 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				carry=0;
 			}
 			temp1=*tail1;
-			//printf("count2\n");
 		    //print_list(headR2);
 			
 		}
@@ -104,7 +102,6 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 				{
 					carry = 0;
 				}
-				//printf("sum is %d\n",sum);
 				dl_insert_first(&headR2,&tailR2,sum);
 				sum = 0;
 				temp1 = temp1->prev;
@@ -117,14 +114,12 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 			//print_list(*headR);
 			//print_list(headR2);
 			addition(headR, tailR, &headR2, &tailR2, &headB, &tailB);
-			//printf("count2\n");
 			dl_delete_list(headR,tailR);
 			*headR = headB;
 			*tailR = tailB;
 			//temp1=*tail1;
 			dl_delete_list(&headR2,&tailR2);
 			//dl_delete_list(&headB,&tailB);
-			//printf("Hai\n");
 		}
 		temp2 = temp2->prev;
 		temp1=*tail1;
