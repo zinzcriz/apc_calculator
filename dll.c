@@ -8,11 +8,13 @@ int dl_insert_first(Dlist **head, Dlist **tail, int data)
         return FAILURE;
     }
     new->data=data;
+    new->prev=NULL;
+    new->next=NULL;
     if(*head==NULL)
     {
         *head=new;
         *tail=new;
-        (*head)->prev=NULL;
+        //(*head)->prev=NULL;
         return SUCCESS;
     }
     new->next=*head;
@@ -77,7 +79,7 @@ void print_list(Dlist *head)
     }
 }
 
-int dl_delete_list(Dlist **head, Dlist **tail)
+/*int dl_delete_list(Dlist **head, Dlist **tail)
 {   
     if(*head==NULL)
         return FAILURE;
@@ -91,8 +93,8 @@ int dl_delete_list(Dlist **head, Dlist **tail)
     *tail=NULL;
     return SUCCESS;
 
-}
-/*int dl_delete_list(Dlist **head, Dlist **tail)
+}*/
+int dl_delete_list(Dlist **head, Dlist **tail)
 {
     if(*head == NULL)
     {
@@ -109,4 +111,4 @@ int dl_delete_list(Dlist **head, Dlist **tail)
     *head=NULL;
     *tail = NULL;
     
-}*/
+}
