@@ -55,6 +55,30 @@ int dl_insert_last(Dlist **head, Dlist **tail, int data)
 
 
 
+// void print_list(Dlist *head)
+// {
+// 	/* Cheking the list is empty or not */
+// 	if (head == NULL)
+// 	{
+// 		printf("INFO : List is empty\n");
+// 	}
+// 	else
+// 	{
+// 	    printf("Head -> ");
+// 	    while (head)		
+// 	    {
+// 		    /* Printing the list */
+// 		    printf("%d <-", head -> data);
+
+// 		    /* Travering in forward direction */
+// 		    head = head -> next;
+// 		    if (head)
+// 		        printf("> ");
+// 	    }
+//     	printf(" Tail\n");
+//     }
+// }
+
 void print_list(Dlist *head)
 {
 	/* Cheking the list is empty or not */
@@ -64,36 +88,19 @@ void print_list(Dlist *head)
 	}
 	else
 	{
-	    printf("Head -> ");
+	    printf("Result: ");
 	    while (head)		
 	    {
 		    /* Printing the list */
-		    printf("%d <-", head -> data);
+		    printf("%d", head -> data);
 
 		    /* Travering in forward direction */
 		    head = head -> next;
-		    if (head)
-		        printf("> ");
 	    }
-    	printf(" Tail\n");
+    	printf("\n");
     }
 }
 
-/*int dl_delete_list(Dlist **head, Dlist **tail)
-{   
-    if(*head==NULL)
-        return FAILURE;
-    while((*head)==NULL)
-    {   
-        *head=(*head)->next;
-        free((*head)->prev);
-    }
-    free(*head);
-    *head=NULL;
-    *tail=NULL;
-    return SUCCESS;
-
-}*/
 int dl_delete_list(Dlist **head, Dlist **tail)
 {
     if(*head == NULL)

@@ -101,5 +101,5 @@ int division(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, Dlist *
 		*headR = NULL;
 		*tailR = NULL;
 	}
-	printf("%d\n", count);
+	printf("Result: %d\n", count);
 }

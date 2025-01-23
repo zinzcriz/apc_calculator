@@ -26,7 +26,7 @@ int main(int argc,char *argv[])
 				        subtraction(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);
 						print_list(headR);    
 				break;
-			case 'm':	
+			case 'x':	
 			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);
 				/* call the function to perform the multiplication operation */
 				        multiplication(&head1,&tail1,&head2,&tail2,&headR,&tailR);
