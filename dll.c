@@ -88,7 +88,7 @@ void print_list(Dlist *head)
 	}
 	else
 	{
-	    printf("Result: ");
+	    //printf("Result: ");
 	    while (head)		
 	    {
 		    /* Printing the list */

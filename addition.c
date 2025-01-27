@@ -61,5 +61,4 @@ int addition(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, Dlist *
 	}
 	if(carry!=0)
 		    dl_insert_first(headR,tailR,carry);
-	//print_list(*headR);
 }

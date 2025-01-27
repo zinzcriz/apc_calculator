@@ -20,12 +20,14 @@ int main(int argc,char *argv[])
 			case '+':
                                 digit_to_list(&head1,&tail1,&head2,&tail2,argv);
 				/* call the function to perform the addition operation */
+				                printf("Result: ");
                                 addition(&head1,&tail1,&head2,&tail2,&headR,&tailR);
 								print_list(headR);
 				break;
 			case '-':
 			            digit_to_list(&head1,&tail1,&head2,&tail2,argv);	
 				/* call the function to perform the subtraction operation */
+				        printf("Result: ");
 				        subtraction(&head1,&tail1,&head2,&tail2,&headR,&tailR,argv);
 						print_list(headR);    
 				break;

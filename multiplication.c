@@ -125,5 +125,6 @@ int multiplication(Dlist **head1, Dlist **tail1, Dlist **head2, Dlist **tail2, D
 		temp1=*tail1;
 		count++;
 	}
+	printf("Result: ");
 	print_list(*headR);
 }

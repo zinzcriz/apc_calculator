@@ -29,7 +29,7 @@ int check_args(int argc,char *argv[])
             return SUCCESS;
         }
         else{
-            printf("Error in entering Arguments\n");
+            printf("Enter a proper operator\n");
             printf("Type --help to get details\n");
         }
     }
