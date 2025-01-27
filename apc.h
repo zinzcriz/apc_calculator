@@ -3,6 +3,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<ctype.h>
 
 #define SUCCESS 0
 #define FAILURE -1
@@ -15,7 +16,8 @@ typedef struct node
 }Dlist;
 
 /* Include the prototypes here */
-
+int check_args(int argc,char *argv[]);
+void call_help();
 /*store the operands into the list */
 void digit_to_list(Dlist **head1,Dlist **tail1,Dlist **head2,Dlist **tail2,char *argv[]);
 

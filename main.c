@@ -3,7 +3,10 @@
 int main(int argc,char *argv[])
 {
 	/* Declare the pointers */
-      
+	if(check_args(argc,argv)==FAILURE)
+	{
+		exit(0);
+	}
 	Dlist *head1=NULL, *tail1=NULL;
     Dlist *head2=NULL, *tail2=NULL; 
     Dlist *headR=NULL,*tailR=NULL;
